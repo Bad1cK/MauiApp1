@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.StartPage"
+             BackgroundColor="#3A3B4C">
+
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Label Text="Welcome to B&amp;O Trading Platform!"
+               FontSize="24"
+               HorizontalOptions="Center"
+               TextColor="White"
+               Margin="0,0,0,20"/>
+        <Label Text="We're here for aspiring traders who want to kickstart their career without financial risk or those looking to sharpen their skills for free. With our demo money, you can dive into the trading world, learn, and grow at your own pace."
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="White"
+               Margin="0,0,0,20"/>
+        <Label Text="Enjoy an exciting trading journey with us!"
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="White"
+               Margin="0,0,0,20"/>
+        <Button Text="Tutorial"
+                Clicked="OnTutorialButtonClicked"
+                BackgroundColor="LightBlue"
+                FontSize="14"
+                Padding="10,5"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <Grid RowDefinitions="Auto,*"
+          ColumnDefinitions="200,*">
+        <!-- Header (Top Panel) -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="50" BackgroundColor="#2C2D3C">
+            <Button ImageSource="power2.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Center" Clicked="OnCloseButtonClicked" BackgroundColor="#3A3B4C"/>
+        </Grid>
+
+        <!-- Left Sidebar (Left Panel) -->
+        <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="#2C2D3C" Padding="10">
+            <!-- Placeholder for Logo -->
+            <Image Source="logo_bo.png" HeightRequest="100" WidthRequest="100" Margin="10,0,10,10" VerticalOptions="Start"/>
+
+            <!-- Buttons -->
+            <Button Text="Profile" BackgroundColor="LightBlue" Margin="10,40,10,10" Clicked="OnProfileButtonClicked" FontSize="14" Padding="5"/>
+            <StackLayout x:Name="ExpandableButtons" IsVisible="False" Opacity="0">
+                <Button Text="Wallet" BackgroundColor="LightBlue" Margin="10" Clicked="OnWalletButtonClicked" FontSize="14" Padding="5"/>
+                <Button Text="Stats" BackgroundColor="LightBlue" Margin="10" Clicked="OnStatsButtonClicked" FontSize="14" Padding="5"/>
+            </StackLayout>
+            <Button Text="Trading" BackgroundColor="LightBlue" Margin="10" Clicked="OnTradingButtonClicked" FontSize="14" Padding="5"/>
+            <Button Text="Tutorial" BackgroundColor="LightBlue" Margin="10" Clicked="OnTutorialButtonClicked" FontSize="14" Padding="5"/>
+        </StackLayout>
+
+        <!-- Main Content Area -->
+        <ScrollView Grid.Row="1" Grid.Column="1" BackgroundColor="#3A3B4C" x:Name="MainContentArea">
+            <StackLayout Padding="20">
+                <Label Text="Welcome to B&amp;O Trading Platform!"
+                       FontSize="24"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0,0,0,20"/>
+                <Label Text="We're here for aspiring traders who want to kickstart their career without financial risk or those looking to sharpen their skills for free. With our demo money, you can dive into the trading world, learn, and grow at your own pace."
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0,0,0,20"/>
+                <Label Text="Enjoy an exciting trading journey with us!"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0,0,0,20"/>
+                <Button Text="Tutorial"
+                        Clicked="OnTutorialButtonClicked"
+                        BackgroundColor="LightBlue"
+                        FontSize="14"
+                        Padding="10,5"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
